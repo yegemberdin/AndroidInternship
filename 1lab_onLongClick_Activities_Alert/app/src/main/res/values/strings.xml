@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">lab1</string>
+    <string name="app_name2">Greeting</string>
+    <string name="delete">Удаление</string>
+    <string name="delete_button">Вы действительно хотите удалить кнопку?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+</resources>
