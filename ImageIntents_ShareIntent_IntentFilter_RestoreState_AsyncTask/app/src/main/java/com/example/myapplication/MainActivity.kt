@@ -7,6 +7,7 @@ import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
+import android.os.PersistableBundle
 import android.provider.MediaStore
 import android.support.v7.app.AlertDialog
 import android.util.Log
@@ -38,6 +39,23 @@ class MainActivity : AppCompatActivity() {
         btn = findViewById<View>(R.id.btn) as Button
         imgview = findViewById<View>(R.id.iv) as ImageView
         btn!!.setOnClickListener { showPictureDialog() }
+
+    }
+
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        if(imageUri!=null){
+            outState!!.putParcelable("uri", imageUri)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        if(savedInstanceState!=null){
+            imageUri=savedInstanceState.getParcelable("uri")
+            imgview!!.setImageURI(imageUri)
+        }
+        super.onRestoreInstanceState(savedInstanceState)
     }
 
 
