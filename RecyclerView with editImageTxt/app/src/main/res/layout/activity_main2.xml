@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ImageView
+            android:id="@+id/imageDetail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+
+
+
+    <TextView
+            android:id="@+id/nameDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageDetail"
+            android:layout_toStartOf="@+id/imageDetail"
+            android:layout_toLeftOf="@+id/imageDetail"
+            android:text="Nazek" />
+    <TextView
+            android:id="@+id/surnameDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameDetail"
+            android:layout_toStartOf="@+id/imageDetail"
+            android:layout_toLeftOf="@+id/imageDetail"
+
+            android:text="TextView" />
+    <Button
+            android:text="Back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/backButton"/>
+
+</RelativeLayout>
